@@ -9,7 +9,14 @@ const Header = () => {
         <div className="site-header__left">
           {/* Logo */}
           <Link className="brand" href="/">
-            <Image />
+            <Image 
+              className="brand__mark"
+              src="/brand/book-logo@2x.png" 
+              width={56} 
+              height={56} 
+              alt="SupaBlog logo" 
+              priority 
+            />
             <span className="brand__name">SupaBlog</span>
           </Link>
           <Link className="site_header__link" href="/">

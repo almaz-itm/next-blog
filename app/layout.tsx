@@ -9,9 +9,14 @@ export const metadata: Metadata = {
   description: "Учебный блог на Next.js",
 };
 
+const themeScript = `try { if (localStorage.getItem('blog-theme') === 'dark') document.documentElement.classList.add('dark-mode'); } catch {}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ru">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html:themeScript }} />
+      </head>
       <body>
         <div className="site-shell">
           <Header />
